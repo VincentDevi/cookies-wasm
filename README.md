@@ -35,14 +35,14 @@ Both name and value are mandatory here. I have decided that you cannot create a 
 3. That's it
 
 
-### Find a specific cookie
+### Get all cookies
 
 ```
     let all_cookies : Result<HashSet<Cookies>,CookiesError> = get_cookies();
 ```
 
 
-### Get all cookies
+### Find a specific cookie
 
 ```
     let specific_cookie : Result<Cookies, CookiesError> = get_cookie("cookie_name");
