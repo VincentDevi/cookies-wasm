@@ -17,7 +17,7 @@ This rust library provides a way to manage cookies.
 1. Create cookie via the builder struct
 
 ```
-    let new_cookie = CreateCookiesBuilder::new()
+    let new_cookie : Result<CreateCookies, CookiesError> = CreateCookiesBuilder::new()
         .name("cookie_name") 
         .value("cookie_value")
         .expire(Some(Expire::After(3600))) # This is Optional
@@ -25,6 +25,7 @@ This rust library provides a way to manage cookies.
         .path("/") # This is Optional
         .build()
 ```
+Both name and value are mandatory here. I have decided that you cannot create a cookie without providing a name.
 
 2. Call function to create new cookie
 
